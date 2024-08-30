@@ -27,14 +27,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px 25px;
+    padding: 10px 25px; /* Increased padding for better spacing */
     color: #333;
     font-size: 16px;
     font-weight: bold;
     width: 100%;
     position: fixed;
+    top: 0; /* Ensure the navbar is fixed to the top */
+    left: 0; /* Ensure the navbar starts from the left edge */
     z-index: 999;
-    opacity: 0.7;
+    opacity: 0.9; /* Slightly increased opacity for better visibility */
 }
 
 .nav .left {
