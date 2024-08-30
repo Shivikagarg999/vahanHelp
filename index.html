@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script> 
 </head>
 <body>
@@ -22,14 +23,14 @@
                 <a href="/">Home</a>
                 <a href="#service">Services</a>
                 <a href="#about">About Us</a>
-                <a class="contButton">Contact</a>
+                <a href="#contact" class="contButton">Contact</a>
             </div>
         </div>
         <div class="head">
             <!-- <div class="cursor"></div> -->
             <h1>Your One-Stop Solution for all vahan related Services</h1>
             <p>From RTO and RC services to complete car care, Vahan Help has you covered.</p>
-            <a href="#service" class="getStartedButton">Explore Our Services</a>
+            <a href="#about" class="getStartedButton">Learn More</a>
             <hr/>
         </div>
         <div id="about" class="about">
@@ -94,7 +95,7 @@
                 <div class="container">
                   <div class="conianer-inner">
                     <div class="circle"></div>
-                    <img src="./images/smiling-blonde-business-woman-posing-with-crossed-arms_171337-6291-removebg-preview.png">
+                    <img src="">
                   </div>
                 </div>
                 <div class="divider"></div>
@@ -147,6 +148,101 @@
             </div> 
            </div>
         </div>
+        <section class="reviews">
+            <h1>What Our Customer Says</h1>
+            <div id="testimonials">
+                <div class="testimonial-container">
+                    <div class="testimonial-slide">
+                        <p>The overall process was very good and smooth, took less than the estimated time to transfer the RC with almost zero follow up.. I was contacted only twice by the team and they took every detail and RC was transferred and delivered to me before time."</p>
+                        <h3>- Himanshu verma</h3>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"Directly I m not aware about them but they call me one day regarding transfer of my car and it's so simple I use to visit RTO only one day later I come to know if I was in local RTO no need to visit.
+
+                            They help me lot and my RC transfer within time period what they given to me .
+                            
+                            Thank you"</p>
+                        <h3>- Pawan Verma</h3>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"I didn't have to move an inch for getting my RC transferred.
+                            Most of the services were executed by them. I only had to show up for presenting the car at the RTO."</p>
+                        <h3>- Dipendra Singh</h3>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"Great experience with car wizard, They did supurb job with the transfer process, very professional behavior especially puneet went extra mile to support."</p>
+                        <h3>- Arpit Yadav</h3>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"I had a good experience rc transfer stop us I bend through very smooth process"</p>
+                        <h3>- Akash Yadav</h3>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p>"The process was very smooth and fast.
+                            Very cooperative and professional team."</p>
+                        <h3>- Abhinav Shukla</h3>
+                    </div>
+                </div>
+                <button id="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <button id="next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </section>
+      <div id="contact" class="contact">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" required pattern="[0-9]{10}" title="Please enter a 10-digit contact number">
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <div class="btnn">
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </div>
+      </div>
+      <div class="footer">
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <h1>Vahan Help</h1>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#service">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p>Email: <a href="mailto:info@vahanhelp.com">puneet@vahanhelp.in</a></p>
+                    <p>Phone: <a href="tel:+918130020341">+918130020341</a></p>
+                    <p>Address: B-48,Basement, B Block, Sector 64, Noida, Uttar Pradesh 201301</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/vahanhelp" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://wa.me/8130020341" aria-label="Whatsapp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.instagram.com/vahan_services/?hl=en" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vahan Help. All Rights Reserved.</p>
+            </div>
+        </footer>
+      </div>
     </div>
 </body>
 </html>

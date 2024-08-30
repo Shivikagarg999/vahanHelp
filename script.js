@@ -28,14 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1
     });
 
-    var bdy = document.querySelector(".main");
-    bdy.addEventListener("mousemove", function(dets) {
-        gsap.to(".cursor", {
-            x: dets.x + 25,
-            y: dets.y + 25
-        });
-    });
-
     gsap.from(".nav .right a", {
         opacity: 0,
         x: -50,
@@ -108,4 +100,65 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.hamburger').addEventListener('click', function() {
         document.querySelector('.right').classList.toggle('active');
     });
+
+    // Testimonial slider
+    const container = document.querySelector('.testimonial-container');
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+
+    document.getElementById('next').addEventListener('click', () => {
+        if (currentIndex < totalSlides - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateSlider();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = totalSlides - 1;
+        }
+        updateSlider();
+    });
+
+    function updateSlider() {
+        const offset = -currentIndex * 100;
+        container.style.transform = `translateX(${offset}%)`;
+    }document.getElementById('contactForm').addEventListener('submit', submitForm);
+
+    function submitForm(event) {
+        event.preventDefault();
+        
+        const form = document.getElementById('contactForm');
+        const formData = new FormData(form);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            contact: formData.get('contact'),
+            message: formData.get('message')
+        };
+    console.log(data)
+        fetch('https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbx8WgOoQ5wMcrvaAxvLZnSuMurmP9ukjk3vMn8cco6qWmPjQYZB5ruD2FxIlVsTukFH/exec', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(response => response.text())
+          .then(text => {
+              alert('Message sent successfully!');
+              form.reset();
+          })
+          .catch(error => {
+              alert('There was a problem sending your message.');
+              console.error('Error:', error);
+          });
+    }
+    
+        
+    
 });
