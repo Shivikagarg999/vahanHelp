@@ -1,12 +1,10 @@
-/* Universal Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Body Styles */
-body {
+html, body {
+    width: 100%;
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -14,20 +12,21 @@ body {
     line-height: 1.6;
     background-color: #F1F1F1;
 }
-
-/* Main Container */
 .main {
     width: 100%;
     background-color: #F1F1F1;
     color: #333;
 }
-
 /* Navigation Styles */
+.nav .left img{
+    height: 130px;
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 25px; /* Increased padding for better spacing */
+    padding: 2px 25px; /* Increased padding for better spacing */
     color: #333;
     font-size: 16px;
     font-weight: bold;
@@ -86,13 +85,15 @@ body {
 @media (max-width: 768px) {
     .nav {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         justify-content: space-between; /* Ensure spacing between logo and menu */
         padding: 20px;
         opacity: 0.9;
         position: relative; /* Ensure positioning context for absolute positioning */
     }
-
+    .nav .left img{
+        height: 60px;
+    }
     .nav .left {
         width: 100%; /* Ensure the logo takes full width */
         text-align: left; /* Align the logo to the left */
@@ -127,6 +128,11 @@ body {
     .nav .contButton {
         margin-top: 10px;
     }
+    .head{
+        height: 35vh;
+        width: 100%;
+        padding: 0;
+    }
 }
 
 /* Ensure the hamburger icon is hidden on desktop */
@@ -142,13 +148,18 @@ body {
     width: 100%;
     max-height: 100vh;
     text-align: center;
-    padding: 50px 20px;
+    padding: 80px 20px;
     border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     border-radius: 30px;
     color: black;
     margin-top: 100px;
     margin-bottom: 50px;
 }
+
 
 .head h1 {
     font-size: 12vh;
@@ -159,7 +170,6 @@ body {
     font-size: 1.3em;
     margin-bottom: 30px;
 }
-
 .headingwithicon {
     display: flex;
     align-items: center;
@@ -327,6 +337,9 @@ i {
     .services .servicesBox p {
         font-size: 9px;
     }
+    .people{
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
@@ -350,6 +363,7 @@ i {
 /* team */
 .team{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
@@ -359,6 +373,14 @@ i {
     background: #e1e1e1;
     position: relative;
     padding: 70px 10px;
+}
+.maint{
+    font-size: 7vh;
+}
+.people{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .person {
     /* border: 1px solid; */
@@ -427,7 +449,7 @@ i {
     min-height: 60vh;
     padding: 100px 20px; /* Adjusted for smaller screens */
     background: linear-gradient(#e1e1e1, #007bff, #0f2d4d);
-    color: white;
+    color: black;
     text-align: center; /* Center align text */
   }
   
@@ -460,7 +482,7 @@ i {
     padding: 20px;
     margin: 10px; /* Space between cards */
     transition: transform 0.3s, box-shadow 0.3s;
-    background-color: rgba(0, 0, 0, 0.3); /* Slightly translucent background */
+    background-color: #acbee7
   }
   
   .num:hover {
@@ -470,13 +492,13 @@ i {
   
   .num i {
     font-size: 3rem; /* Larger icon size */
-    color: white;
+    color: black;
     margin-bottom: 10px;
   }
   
   .num h2 {
     font-size: 1.5rem;
-    color: white;
+    color: black;
   }
   
   /* Responsive styles */
@@ -644,101 +666,101 @@ i {
         font-size: 16px;
     }
 }
-.footer {
-    background-color: #060505;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
-.footer-container {
+
+footer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-top: auto;
+    background-color: #F1F1F1;
+    padding: 60px 10%;
 }
 
-.footer-logo h1 {
-    font-size: 24px;
-}
-
-.footer-links, .footer-contact, .footer-social {
-    flex: 1;
-    margin: 10px;
-}
-
-.footer-links h3, .footer-contact h3, .footer-social h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.footer-links ul, .footer-social ul {
+ul{
     list-style: none;
 }
 
-.footer-links li, .footer-social li {
-    margin-bottom: 10px;
+.footer-col{
+    width: 25%;
+    margin: 28px;
 }
-
-.footer-links a, .footer-social a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-links a:hover, .footer-social a:hover {
-    text-decoration: underline;
-}
-
-.footer-contact p {
-    margin-bottom: 10px;
-}
-.footer-contact p a{
-    list-style: none;
-    color: gray;
-}
-.footer-social ul {
+.items{
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 0;
+}
+.footer-col img{
+    height: 90px;
+    margin: 10px;
+} 
+.footer-col h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 22px;
+    color: rgb(108, 108, 108);
+    text-transform: capitalize;
+}
+.footer-col p{
+    color: #333;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #27c0ac;
+    height: 2px;
+    width: 40px;
 }
 
-.footer-social li {
-    margin: 0 10px;
+ul li:not(:last-child){
+    margin-bottom: 8px;
 }
-.footer-social li i{
-    font-size: 30px;
-    color: white;
+
+ul li a{
+    display: block;
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #333;
+    text-decoration: none;
+    transition: 0.4s;
 }
-.footer-social li i:hover{
+
+ul li a:hover{
     color: gray;
+    padding-left: 2px;
 }
-.footer-bottom {
-    margin-top: 20px;
-    border-top: 1px solid #444;
-    padding-top: 10px;
+.links a{
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    color: white;
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+.links a:hover{
+    color: #4d4f55;
+    background-color: white;
 }
 
-.footer-bottom p {
-    font-size: 14px;
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-links, .footer-contact, .footer-social {
+@media(max-width: 740px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
         text-align: center;
     }
 
-    .footer-social ul {
-        flex-direction: column;
+    .footer-col h4::before{
+        all: unset;
     }
+}
 
-    .footer-social li {
-        margin: 5px 0;
+@media(max-width: 555px){
+    .footer-col{
+        width: 100%;
     }
 }
